@@ -1,0 +1,24 @@
+ 
+ *{
+    &,
+    &::after,
+    &::before{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+ }
+
+ html{
+   // font-size: 10px;  //1rem=10px set kru shakto//1rem=16px by default value but set 1rem=10px kru shakto apan confusing hot asel tr
+     font-size: 16px;
+   }
+
+ body{
+    color: #111;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    padding: 1.875rem;
+    font-family: 'Lato', sans-serif;
+ }

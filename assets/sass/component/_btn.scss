@@ -1,0 +1,69 @@
+
+.btn{
+    &,
+    &:link,
+    &:visited{
+        cursor: pointer;
+        display: inline-block;
+        padding: 0.625rem 2.5rem; 
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1rem;
+        border-radius: 6.25rem;
+        border: 0px;
+        position: relative;
+        transition: all .4s ease-in-out;
+    }
+    &-white{
+        background-color: $color-white;
+        color: $color-grey-dark;
+        // &::before{
+        //     background-color: $color-white;
+        // }
+
+        // &:hover{   //whi&gree che common mde khali css aply kly
+        //     transform: translateY(-0.625rem);
+        //     box-shadow: 0 10px 20px rgba(#000, .2);
+            
+        // }
+    }
+    &-green{
+        background-color: $color-primary-dark;
+        color: $color-white;
+        // &::before{
+        //     background-color: $color-primary-dark;
+        // }
+    } 
+    &::before{
+        content: '';
+       // background-color: $color-white;
+       background-color: inherit;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 6.25rem;
+        z-index: -1;
+        transition: all .4s ease-in-out;
+    }
+    &:hover, &:focus{  //.btn:hover
+        transform: translateY(-0.1875rem);
+        box-shadow: 0 0.625rem 1.25rem rgba(#000, .2);
+                //  x y spread/blurr
+            &::before{   //.btn:hover::after
+                transform: scale(1.5);
+                opacity: 0;
+            }   
+    }
+
+    // &:hover::before{
+    //     transform: scale(1.5);
+    //     opacity: 0;
+    // }
+
+    &:active{
+        transform: translateY(-0.0625rem);
+        box-shadow: 0 0.3125rem 0.625rem rgba(#000, .2);
+    }
+}
